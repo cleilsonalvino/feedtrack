@@ -33,6 +33,7 @@
   }
   
   .container-lateral .linha {
+    margin: 10px;
     width: 100px;
     height: 5px;
     border: 4px solid white;
