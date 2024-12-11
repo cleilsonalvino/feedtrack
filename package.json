@@ -1,0 +1,14 @@
+{
+  "name": "feedtrack",
+  "version": "1.0.0",
+  "description": "Projeto de construcao de sites 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^4.4.7"
+  }
+}
