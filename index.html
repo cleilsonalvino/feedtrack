@@ -1,13 +1,93 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-Br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="public/css/bootstrap.css">
-    <script src="public/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="/public/css/src/index.css">
+    <link rel="stylesheet" href="/public/css/frameworks/bootstrap.css">
+    <title>Login - Feedtrack</title>
 </head>
-<body>
-    
+<body class=" bg-dark p-3">
+    <div id="liveAlertPlaceholder"></div>
+    <div class="container-fluid container-main">
+            <div class=" title-text mt-3 text-white">
+                <h1>Bem-vindo! Esse é o Feedtrack 🤞👌🤌</h1>
+                <h3>Faça o login para continuar:</h3>
+            </div>
+
+            <div class=" container-index container p-5 my-5 bg-dark container-sm container-md container-lg container-xl ">
+                <div class="text-white container-lateral">
+                    <div class="content-rotacion">
+                        <h1>FEED</h1>
+                        <div class="linha"></div>
+                    </div>
+                    <div class="content-rotacion">
+                        <div class="linha"></div>
+                        <h1>TRACK</h1>
+                    </div>
+                    </div>
+
+                <form class="form">
+                    <span class="input-span">
+                    <label for="usuario" class="label">Usuário</label>
+                    <input type="text" name="usuario" id="usuario"
+                    /></span>
+                    <span class="input-span">
+                    <label for="password" class="label">Senha</label>
+                    <input type="password" name="password" id="password"
+                    /></span>
+                    <span class="span"><a href="#">Esqueceu a senha?</a></span>
+                    <input class="submit" type="submit" id="liveAlertBtn" value="Login" />
+                    <span class="span"> <a href="#">Cadastre-se caso não tenha login!</a></span>
+                </form>
+        </div>
+    </div>
+
+    <script>
+        const alertPlaceholder = document.getElementById('liveAlertPlaceholder');
+            const appendAlert = (message, type) => {
+                const wrapper = document.createElement('div');
+                wrapper.innerHTML = [
+                    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+                    `   <div>${message}</div>`,
+                    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                    '</div>'
+                ].join('');
+
+                alertPlaceholder.append(wrapper);
+            }
+
+            // Validação do formulário ao enviar
+            document.querySelector("form").addEventListener("submit", function (event) {
+                event.preventDefault(); // Impede o recarregamento da página ao enviar o formulário
+
+                // Captura os valores dos campos
+                const usuario = document.getElementById("usuario").value.trim();
+                const password = document.getElementById("password").value.trim();
+
+                // Inicializa uma variável para armazenar erros
+                let mensagemErro = "";
+
+                // Validação do Nome
+                if (usuario === "") {
+                    mensagemErro += "O campo usuário é obrigatório.\n";
+                }
+
+                // Validação da Data de Nascimento
+                if (password === "") {
+                    mensagemErro += "A senha é obrigatória.\n";
+                }
+
+                // Exibe erros ou envia o formulário
+                if (mensagemErro) {
+                    alert(mensagemErro); // Exibe os erros em um alerta
+                } else {
+                    appendAlert('Login  Realizado com sucesso!', 'success'); // Chama a função para exibir o alerta
+                    setTimeout(() => {
+                        window.location.href = ""; // Adicionar a dashboard.
+                    }, 1000);
+                }
+            });
+    </script>
 </body>
 </html>
