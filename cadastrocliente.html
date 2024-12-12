@@ -1,36 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de cliente</title>
-    <link rel="stylesheet" href="public/css/bootstrap.css">
+    <link rel="stylesheet" href="public/css/frameworks/bootstrap.css">
     <link rel="stylesheet" href="public/css/global/styles.css">
-    <script src="public/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="public/css/paginas/dashboard.css">
+    <script src="public/js/frameworks/bootstrap.js"></script>
+
 </head>
+
 <body>
-    <main>
-        <div id="liveAlertPlaceholder"></div>
-        <h1 class="m-5">Cadastro de Cliente</h1>
-        
-        <form action="">
-            <div class="cadastro card">
-                <label for="cpfCliente">CPF (opcional)</label>
-                <input type="text" id="cpfCliente" maxlength="14" placeholder="000.000.000-00">
+    <div class="d-flex">
+        <div class="sidebar">
+            <a href="index.html">Sair</a>
+            <a href="dashboard.html">Início</a>
+            <a href="#">Registro e Consulta de Feedbacks</a>
+            <a href="cadastrocliente.html">Cadastro e Edição de Clientes</a>
+            <a href="#">Cadastro e Edição de Produtos</a>
+            <a href="cadastrofuncionario.html">Lista de Funcionários</a>
+            <a href="#">Relatórios Simples</a>
+        </div>
+        <main>
+            <div id="liveAlertPlaceholder"></div>
+            <h1 class="m-5">Cadastro de Cliente</h1>
+            <!-- Scrollable modal -->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Novo Cliente
+            </button>
 
-                <label for="telefoneCliente">Telefone</label>
-                <input type="text" id="telefoneCliente" maxlength="16" placeholder="(79) 9 9999-9999">
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content modal-cadastro">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastrar novo cliente</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body modal-cadastro">
+                            <form action="">
+                                <div class="cadastro card">
+                                    <label for="cpfCliente">CPF (opcional)</label>
+                                    <input type="text" id="cpfCliente" maxlength="14" placeholder="000.000.000-00">
 
-                <label for="nomeCliente">Nome</label>
-                <input type="text" name="nomeCliente" id="nomeCliente">
+                                    <label for="telefoneCliente">Telefone</label>
+                                    <input type="text" id="telefoneCliente" maxlength="16"
+                                        placeholder="(79) 9 9999-9999">
 
-                <label for="dataNascimento">Data de Nascimento</label>
-                <input type="date" name="dataNascimento" id="dataNascimento" required>
+                                    <label for="nomeCliente">Nome</label>
+                                    <input type="text" name="nomeCliente" id="nomeCliente">
+
+                                    <label for="dataNascimento">Data de Nascimento</label>
+                                    <input type="date" name="dataNascimento" id="dataNascimento" required>
+                                </div>
+
+                                <button type="submit" class="enviar" id="liveAlertBtn" data-bs-dismiss="modal">Cadastrar</button>
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
             </div>
-
-            <button type="submit" class="enviar" id="liveAlertBtn">Cadastrar</button>
-        </form>
-
+        </main>
         <script>
             const alertPlaceholder = document.getElementById('liveAlertPlaceholder');
             const appendAlert = (message, type) => {
@@ -46,19 +81,19 @@
             }
 
             document.getElementById("cpfCliente").addEventListener("input", function () {
-    let cpf = this.value;
+                let cpf = this.value;
 
-    // Remove caracteres que não sejam números
-    cpf = cpf.replace(/\D/g, "");
+                // Remove caracteres que não sejam números
+                cpf = cpf.replace(/\D/g, "");
 
-    // Adiciona a máscara de CPF (000.000.000-00)
-    cpf = cpf.replace(/^(\d{3})(\d)/, "$1.$2");       // Adiciona o primeiro ponto
-    cpf = cpf.replace(/^(\d{3})\.(\d{3})(\d)/, "$1.$2.$3"); // Adiciona o segundo ponto
-    cpf = cpf.replace(/^(\d{3})\.(\d{3})\.(\d{3})(\d)/, "$1.$2.$3-$4"); // Adiciona o hífen
+                // Adiciona a máscara de CPF (000.000.000-00)
+                cpf = cpf.replace(/^(\d{3})(\d)/, "$1.$2");       // Adiciona o primeiro ponto
+                cpf = cpf.replace(/^(\d{3})\.(\d{3})(\d)/, "$1.$2.$3"); // Adiciona o segundo ponto
+                cpf = cpf.replace(/^(\d{3})\.(\d{3})\.(\d{3})(\d)/, "$1.$2.$3-$4"); // Adiciona o hífen
 
-    // Atualiza o valor do campo com a máscara aplicada
-    this.value = cpf;
-});
+                // Atualiza o valor do campo com a máscara aplicada
+                this.value = cpf;
+            });
 
 
             // Máscara para o telefone
@@ -120,6 +155,6 @@
                 }
             });
         </script>
-    </main>
 </body>
+
 </html>
