@@ -1,0 +1,32 @@
+
+body {
+    background-color: #1a1a1a; /* Cor de fundo da página */
+    padding-top: 40px; /* Espaçamento superior */
+    
+}
+.title-text {
+    text-align: center; 
+    font-family: 'Arial', sans-serif; 
+    
+}
+
+/* Adicionando uma classe para centralizar o botão */
+.text-center {
+    text-align: center; /* Centraliza o botão horizontalmente */
+    margin-top: 20px; /* Dê um espaço acima do botão */
+}
+
+.card-body {
+    padding: 1rem;
+    background-color: #1a1a1a;
+    border: 1px solid #ffc107;
+    color: aliceblue;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-size: 1.25rem; /* Ajusta o tamanho do título */
+    font-weight: bold;
+    color: white
+}
+
