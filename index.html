@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/css/paginas/login.css">
+    <link rel="stylesheet" href="./public/css/src/login.css">
+    <link rel="stylesheet" href="/public/css/global/fontawesome.all.min.css">
     <link rel="stylesheet" href="./public/css/frameworks/bootstrap.css">
     <title>Login - Feedtrack</title>
 </head>
@@ -11,7 +12,7 @@
     <div id="liveAlertPlaceholder"></div>
     <div class="container-fluid container-main">
             <div class=" title-text mt-3 text-white">
-                <h1>Bem-vindo! Esse é o Feedtrack 🤞👌🤌</h1>
+                <h1>Bem-vindo! Esse é o Feedtrack <i class="fa-regular fa-handshake"></i></h1>
                 <h3>Faça o login para continuar:</h3>
             </div>
 
@@ -42,6 +43,12 @@
                 </form>
         </div>
     </div>
+
+    <footer class="container-fluid footer navbar-fixed-bottom">
+        <hr>
+        &copy;
+        <span><a href="#" target="_blank">FeedTrack.com.br</a>2024</span>
+    </footer>
 
     <script>
         const alertPlaceholder = document.getElementById('liveAlertPlaceholder');
