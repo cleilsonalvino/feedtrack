@@ -1,19 +1,17 @@
 /* Estilo geral da página */
 body {
-    background-color: #1a1a1a; /* Cor de fundo da página */
-    padding-top: 40px; /* Espaçamento superior */
+    background-color: #202634; /* Cor de fundo da página */
     
 }
+
+a[href="#"]{
+    color: red;
+  }
 
 .card-body {
     text-align: center; /* Centraliza o texto dentro do card */
     background-color: #1a1a1a;
     border: 1px solid #ffc107;
-  
-   
-    
-  
-    
 }
 
 .card-title {
@@ -30,8 +28,6 @@ body {
 /* Estilo das imagens */
 .card-img-top {
  margin: auto;
- 
-    
 }
 
 
