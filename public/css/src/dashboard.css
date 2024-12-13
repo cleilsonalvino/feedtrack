@@ -34,8 +34,8 @@
     margin-top: 10px;
     background-color: #1a1a1a;
     border-right: 1px solid #ffc107;
-    position: sticky;
     top: 10px;
+    width: 30vw;
 }
 
 .sidebar a {

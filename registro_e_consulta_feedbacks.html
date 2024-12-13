@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="/public/css/src/style.feedbecks.css">
+    <link rel="stylesheet" href="public/css/frameworks/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/global/fontawesome.all.min.css">
+    <link rel="stylesheet" href="public/css/src/style.feedbacks.css">
+    <link rel="stylesheet" href="public/css/src/dashboard.css">
     
     <script src="/public/js/frameworks/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
@@ -15,75 +16,87 @@
 </head>
 
 <body>
-    <div class="title-text mt-3 text-white">
-        <h1>Registros de Feedbecks</h1>
-    </div>
-
-    <div class="container">
-
-        <!-- Card -->
-        <div class="row justify-content-center">
-            <div class="col-md-8 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Histórico de Feedbecks</h5>
+    <div class="d-flex">
+        <div class="sidebar">
+            <a href="index.html">Sair</a>
+            <a href="dashboard.html">Início</a>
+            <a href="registro_e_consulta_feedbacks.html">Registro e Consulta de Feedbacks</a>
+            <a href="cadastro_clientes.html">Cadastro e Edição de Clientes</a>
+            <a href="#">Cadastro e Edição de Produtos</a>
+            <a href="cadastro_funcionarios.html">Lista de Funcionários</a>
+            <a href="#">Relatórios Simples</a>
+        </div>
+    
+        <div class="container">
+            <div class="title-text mt-3 text-white">
+                <h1>Registros de Feedbecks</h1>
+            </div>
+    
+            <!-- Card -->
+            <div class="row justify-content-center">
+                <div class="col-md-8 mb-4">
+                    <div class="card">
                         <div class="card-body">
-                            <p><strong>Cliente:Luis Santiago
-                                </strong><br> <strong> Vendedor:Leticia</strong><br>
-                               <strong> Feedbeck:</strong><br>  <strong> Atendimento de leticia:</strong> O  atendimento de Letícia foi excepcional, ela foi atenciosa, simpática e demonstrada grande conhecimento <br><strong>
-                               Produto comprado:</strong> O tênis que comprei é de excelente qualidade, com ótimo conforto, design moderno e materiais resistentes
-
+                            <h5 class="card-title">Histórico de Feedbecks</h5>
+                            <div class="card-body">
+                                <p><strong>Cliente:Luis Santiago
+                                    </strong><br> <strong> Vendedor:Leticia</strong><br>
+                                   <strong> Feedbeck:</strong><br>  <strong> Atendimento de leticia:</strong> O  atendimento de Letícia foi excepcional, ela foi atenciosa, simpática e demonstrada grande conhecimento <br><strong>
+                                   Produto comprado:</strong> O tênis que comprei é de excelente qualidade, com ótimo conforto, design moderno e materiais resistentes
+    
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Douglas:</strong><br> Vendedora</p>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Maria:</strong><br> Vendedora</p>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>João:</strong><br> Vendedora</p>
+                            </div>
+                            
                         </div>
-                        <div class="card-body">
-                            <p><strong>Douglas:</strong><br> Vendedora</p>
-                        </div>
-                        <div class="card-body">
-                            <p><strong>Maria:</strong><br> Vendedora</p>
-                        </div>
-                        <div class="card-body">
-                            <p><strong>João:</strong><br> Vendedora</p>
-                        </div>
-                        
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="text-center mb-4">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">
-                ESCREVA O SEU FEEDBACK
-            </button>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Registro de Feedbecks</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="mb-3">
-                                <label for="recipient-name" class="col-form-label">Nome do destinatario:</label>
-                                <input type="text" class="form-control" id="recipient-name">
-                            </div>
-                            <div class="mb-3">
-                                <label for="message-text" class="col-form-label">Registre aqui seu Feedbeck:</label>
-                                <textarea class="form-control" id="message-text"></textarea>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                        <button type="button" class="btn btn-primary">Enviar</button>
+    
+            <div class="text-center mb-4">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">
+                    ESCREVA O SEU FEEDBACK
+                </button>
+            </div>
+    
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Registro de Feedbecks</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Nome do destinatario:</label>
+                                    <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message-text" class="col-form-label">Registre aqui seu Feedbeck:</label>
+                                    <textarea class="form-control" id="message-text"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                            <button type="button" class="btn btn-primary">Enviar</button>
+                        </div>
                     </div>
                 </div>
             </div>
+    
         </div>
-
     </div>
+
 
 </body>
 
