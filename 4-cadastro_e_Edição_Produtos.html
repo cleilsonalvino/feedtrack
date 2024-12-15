@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/frameworks/bootstrap.css">
+    <link rel="stylesheet" href="public/css/global/styles.css">
+    <link rel="stylesheet" href="/public/css/global/sidebar.css">
+    <link rel="stylesheet" href="/public/css/global/footer.css">
+    <title>Cadastro de Produto</title>
+</head>
+<body class=" d-flex bg-dark">
+  
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="navbar navbar-dark col-2">
+        <div  style="height: 100vh; padding-left: 0%; width: 100%;">  
+          <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary" style=" height: 100%;">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+              <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+              <span class="fs-4">FEEDTRACK</span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+              <li class="nav-item">
+                <a href="1-dashboard.html" class="nav-link active" aria-current="page">
+                  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"/></svg>
+                  Dashboard
+                </a>
+              </li>
+              <li>
+                <a href="2-registro_e_consulta_feedbacks.html" class="nav-link link-body-emphasis">
+                  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+                  Feedbacks
+                </a>
+              </li>
+              <li>
+                <a href="3-cadastro_clientes.html" class="nav-link link-body-emphasis">
+                  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+                  Clientes
+                </a>
+              </li>
+              <li>
+                <a href="4-cadastro_e_Edição_Produtos.html" class="nav-link link-body-emphasis">
+                  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"/></svg>
+                  Produto
+                </a>
+              </li>
+              <li>
+                <a href="5-cadastro_funcionarios.html" class="nav-link link-body-emphasis">
+                  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"/></svg>
+                  Funcionários
+                </a>
+              </li>
+              <li>
+                <a href="6-Sobre.html" class="nav-link link-body-emphasis">
+                  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
+                  Sobre
+                </a>
+              </li>
+              <li>
+                <a href="index.html" class="nav-link link-body-emphasis">
+                  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+                  Sair
+                </a>
+              </li>
+            </ul>
+            <hr>
+            <div class="dropup">
+              <a href="#" class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                <strong>Usuário</strong>
+              </a>
+              <ul class="dropdown-menu text-small shadow">
+                <li><a class="dropdown-item" href="#">Histórico</a></li>
+                <li><a class="dropdown-item" href="#">Configurações</a></li>
+                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Sair</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <main class="col">
+      <h1 class="m-5">Cadastro de Produtos</h1>
+                <!-- Scrollable modal -->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary d-block m-auto " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Novo Produto
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content modal-cadastro bg-dark">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastrar novo Produto</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body modal-cadastro bg-dark">
+                                <form action="">
+                                    <div class="cadastro card bg-dark">
+                                        <label for="cpfCliente">Código do Produto</label>
+                                        <input type="text" id="cpfCliente" maxlength="14" placeholder="000.000.000-00">
+
+                                        <label for="telefoneCliente">Nome do Produto</label>
+                                        <input type="text" id="telefoneCliente" maxlength="16" placeholder="(79) 9 9999-9999">
+
+                                        <label for="nomeCliente">Preço</label>
+                                        <input type="text" name="nomeCliente" id="nomeCliente">
+
+                                        <label for="dataNascimento">Data de Chegada</label>
+                                        <input type="date" name="dataNascimento" id="dataNascimento" required>
+                                    </div>
+
+                                    <button type="submit" class="enviar" id="liveAlertBtn"
+                                        data-bs-dismiss="modal">Cadastrar</button>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                   
+                </div>
+        
+                <div class="modal fade" id="editarUsuario">
+                    <div class="modal-dialog">
+                        <div class="modal-content modal-cadastro">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastrar novo produto</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body modal-cadastro">
+                                <form action="">
+                                    <div class="cadastro card">
+                                        <label for="cpfCliente">Código do Produto</label>
+                                        <input type="text" id="cpfCliente" maxlength="14" placeholder="000.000.000-00">
+
+                                        <label for="telefoneCliente">Nome do Produto</label>
+                                        <input type="text" id="telefoneCliente" maxlength="16" placeholder="(79) 9 9999-9999">
+
+                                        <label for="nomeCliente">Preço</label>
+                                        <input type="text" name="nomeCliente" id="nomeCliente">
+
+                                        <label for="dataNascimento">Data de Chegada</label>
+                                        <input type="date" name="dataChegada" id="dataNascimento" required>
+                                    </div>
+
+                                    <button type="submit" class="enviar" id="liveAlertBtn"
+                                        data-bs-dismiss="modal">Atualizar</button>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="deletarUsuario" >
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                          <div class="modal-title bg-dark">
+                              <h5>Deseja realmente excluír?</h5>
+                          </div>
+                          <div class="modal-footer bg-dark">
+                              <button class="btn btn-success col-5" data-bs-dismiss="modal" onclick="appendAlert('Usuário excluído com sucesso!', 'success')">Sim</button>
+
+                              <button class="btn btn-danger col-5" data-bs-dismiss="modal" >Não</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+                <div class="modal fade" id="deletarUsuario" >
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-title bg-dark">
+                                <h5>Deseja realmente excluír?</h5>
+                            </div>
+                            <div class="modal-footer bg-dark">
+                                <button class="btn btn-success col-5" data-bs-dismiss="modal" onclick="appendAlert('Produto excluído com sucesso!', 'success')">Sim</button>
+
+                                <button class="btn btn-danger col-5" data-bs-dismiss="modal" >Não</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <table class="tabela col-xl-6 col-lg-8 col-md-10 m-auto mt-5 ">
+                    <thead>
+                        <tr>
+                            <th>Código do Produto</th>
+                            <th>Nome do Produto</th>
+                            <th>Preço</th>
+                            <th>Data de Chegada</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>00000000</td>
+                            <td>Tênis</td>
+                            <td>$319,99</td>
+                            <td>10//12/23</td>
+                            <td>
+                                <i class="fa-solid fa-pencil text-primary" data-bs-target="#editarUsuario" data-bs-toggle="modal" role="button"></i>
+                            </td>
+                            <td>
+                                <i class="fa-solid fa-trash text-danger" data-bs-target="#deletarUsuario" data-bs-toggle="modal" role="button"></i>
+                            </td>
+
+                        </tr>
+                        <tr>
+                          <td>00000000</td>
+                          <td>Calça</td>
+                          <td>$169,99</td>
+                          <td>12//10/24</td>
+                            <td>
+                                <i class="fa-solid fa-pencil text-primary" data-bs-target="#editarUsuario" data-bs-toggle="modal" role="button"></i>
+                            </td>
+                            <td>
+                                <i class="fa-solid fa-trash text-danger" data-bs-target="#deletarUsuario" data-bs-toggle="modal" role="button"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                          <td>00000000</td>
+                          <td>Bola de campo</td>
+                          <td>$189,99</td>
+                          <td>25//11/24</td>
+                            <td>
+                                <i class="fa-solid fa-pencil text-primary" data-bs-target="#editarUsuario" data-bs-toggle="modal" role="button"></i>
+                            </td>
+                            <td>
+                                <i class="fa-solid fa-trash text-danger" data-bs-target="#deletarUsuario" data-bs-toggle="modal" role="button"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+
+                    </tfoot>
+                </table>
+    </main>
+    <div class="w-100 d-none d-md-block"></div>
+    <footer class="text-center py-3 col">
+        <h1>Footer</h1>
+        <p>&copy; 2024 FeedTrack. Todos os direitos reservados.</p>
+    </footer>
+  </div>
+</div>
+
+
+<script>
+  const alertPlaceholder = document.getElementById('liveAlertPlaceholder');
+  const appendAlert = (message, type) => {
+      const wrapper = document.createElement('div');
+      wrapper.innerHTML = [
+          `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+          `   <div>${message}</div>`,
+          '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+          '</div>'
+      ].join('');
+
+      alertPlaceholder.append(wrapper);
+  }
+
+  document.getElementById("cpfCliente").addEventListener("input", function () {
+      let cpf = this.value;
+
+      // Remove caracteres que não sejam números
+      cpf = cpf.replace(/\D/g, "");
+
+      // Adiciona a máscara de CPF (000.000.000-00)
+      cpf = cpf.replace(/^(\d{3})(\d)/, "$1.$2");       // Adiciona o primeiro ponto
+      cpf = cpf.replace(/^(\d{3})\.(\d{3})(\d)/, "$1.$2.$3"); // Adiciona o segundo ponto
+      cpf = cpf.replace(/^(\d{3})\.(\d{3})\.(\d{3})(\d)/, "$1.$2.$3-$4"); // Adiciona o hífen
+
+      // Atualiza o valor do campo com a máscara aplicada
+      this.value = cpf;
+  });
+
+
+  // Máscara para o telefone
+  document.getElementById("telefoneCliente").addEventListener("input", function () {
+      let telefone = this.value;
+
+      // Remove todos os caracteres não numéricos
+      telefone = telefone.replace(/\D/g, "");
+
+      // Aplica a máscara ao telefone
+      if (telefone.length <= 2) {
+          telefone = telefone.replace(/^(\d{2})/, "($1) ");  // Adiciona o DDD
+      } else if (telefone.length <= 6) {
+          telefone = telefone.replace(/^(\d{2})(\d{1})/, "($1) $2 "); // Adiciona o espaço após o DDD
+      } else if (telefone.length <= 10) {
+          telefone = telefone.replace(/^(\d{2})(\d{1})(\d{4})/, "($1) $2 $3-"); // Adiciona o traço
+      } else {
+          telefone = telefone.replace(/^(\d{2})(\d{1})(\d{4})(\d{4})/, "($1) $2 $3-$4"); // Formato final
+      }
+
+      // Atualiza o valor do campo com a máscara aplicada
+      this.value = telefone;
+  });
+
+  // Validação do formulário ao enviar
+  document.querySelector("form").addEventListener("submit", function (event) {
+      event.preventDefault(); // Impede o recarregamento da página ao enviar o formulário
+
+      // Captura os valores dos campos
+      const cpfCliente = document.getElementById("cpfCliente").value.trim();
+      const telefoneCliente = document.getElementById("telefoneCliente").value.trim();
+      const nomeCliente = document.getElementById("nomeCliente").value.trim();
+      const dataNascimento = document.getElementById("dataNascimento").value.trim();
+
+      // Inicializa uma variável para armazenar erros
+      let mensagemErro = "";
+
+      // Validação do Telefone (deve ter 11 dígitos)
+      const telefoneSemFormatacao = telefoneCliente.replace(/\D/g, "");
+      if (telefoneSemFormatacao === "" || !/^\d{11}$/.test(telefoneSemFormatacao)) {
+          mensagemErro += "O telefone deve conter 11 dígitos.\n";
+      }
+
+      // Validação do Nome
+      if (nomeCliente === "") {
+          mensagemErro += "O campo Nome é obrigatório.\n";
+      }
+
+      // Validação da Data de Nascimento
+      if (dataNascimento === "") {
+          mensagemErro += "A Data de Nascimento é obrigatória.\n";
+      }
+
+      // Exibe erros ou envia o formulário
+      if (mensagemErro) {
+          alert(mensagemErro); // Exibe os erros em um alerta
+      } else {
+          appendAlert('Cliente Cadastrado com sucesso!', 'success'); // Chama a função para exibir o alerta
+      }
+  });
+</script>
+
+
+</body>
+
+  <script src="public/js/frameworks/bootstrap.js"></script>
+  <script src="/public/js/frameworks/popper.min.js"></script>
+  <script src="/public/js/frameworks/bootstrap.bundle.js"></script>
+</html>
