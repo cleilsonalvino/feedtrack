@@ -150,7 +150,7 @@
             <div class="modal-content modal-cadastro">
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="exampleModalLabel">
-                Cadastrar novo cliente
+                Editar cliente
                 </h1>
                 <button
                 type="button"
@@ -228,95 +228,86 @@
         </div>
         </div>
 
-        <table class="tabela col-xl-6 col-lg-8 col-md-10 m-auto mt-5">
-        <thead>
-            <tr>
-            <th>CPF</th>
-            <th>Telefone</th>
-            <th>Nome</th>
-            <th>Data Nascimento</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-            <td>00000000</td>
-            <td>78787878787</td>
-            <td>Cleilson</td>
-            <td>12/12/12</td>
-            <td>
-                <i
-                class="fa-solid fa-pencil text-primary"
-                data-bs-target="#editarUsuario"
-                data-bs-toggle="modal"
-                role="button"
-                ></i>
-            </td>
-            <td>
-                <i
-                class="fa-solid fa-trash text-danger"
-                data-bs-target="#deletarUsuario"
-                data-bs-toggle="modal"
-                role="button"
-                ></i>
-            </td>
-            </tr>
-            <tr>
-            <td>00000000</td>
-            <td>78787878787</td>
-            <td>Cleilson</td>
-            <td>12/12/12</td>
-            <td>
-                <i
-                class="fa-solid fa-pencil text-primary"
-                data-bs-target="#editarUsuario"
-                data-bs-toggle="modal"
-                role="button"
-                ></i>
-            </td>
-            <td>
-                <i
-                class="fa-solid fa-trash text-danger"
-                data-bs-target="#deletarUsuario"
-                data-bs-toggle="modal"
-                role="button"
-                ></i>
-            </td>
-            </tr>
-            <tr>
-            <td>00000000</td>
-            <td>78787878787</td>
-            <td>Cleilson</td>
-            <td>12/12/12</td>
-            <td>
-                <i
-                class="fa-solid fa-pencil text-primary"
-                data-bs-target="#editarUsuario"
-                data-bs-toggle="modal"
-                role="button"
-                ></i>
-            </td>
-            <td>
-                <i
-                class="fa-solid fa-trash text-danger"
-                data-bs-target="#deletarUsuario"
-                data-bs-toggle="modal"
-                role="button"
-                ></i>
-            </td>
-            </tr>
-        </tbody>
-        <tfoot></tfoot>
-        </table>
+        <div class="container mt-4">
+          <div id="userCards" class="row g-3">
+            <!-- Os cards serão inseridos aqui dinamicamente -->
+          </div>
+        </div>
+        
+        
+        
     </main>
     </div>
 
 
-    <footer class="text-center row fixed-bottom">
+    <footer class="text-center row">
         <h1>Footer</h1>
         <p>&copy; 2024 FeedTrack. Todos os direitos reservados.</p>
     </footer>
 
     <script>
+
+
+    // Função para gerar dados fictícios (para CPF e Data de Nascimento)
+function gerarCPF() {
+  return Math.floor(100000000 + Math.random() * 900000000).toString(); // CPF fictício
+}
+
+function gerarDataNascimento() {
+  const dia = Math.floor(Math.random() * 28) + 1;
+  const mes = Math.floor(Math.random() * 12) + 1;
+  const ano = Math.floor(Math.random() * 30) + 1970;
+  return `${dia.toString().padStart(2, '0')}/${mes.toString().padStart(2, '0')}/${ano}`;
+}
+
+// Requisição para buscar os usuários
+fetch('https://jsonplaceholder.typicode.com/users')
+  .then(response => response.json())
+  .then(users => {
+    const userCards = document.querySelector('#userCards');
+
+    // Limpar os cards antes de adicionar os novos dados
+    userCards.innerHTML = '';
+
+    users.forEach(user => {
+      // Criar o HTML do card
+      const card = `
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card shadow-sm h-100">
+            <div class="card-body bg-dark">
+              <h5 class="card-title">${user.name}</h5>
+              <p class="card-text">
+                <strong>CPF:</strong> ${gerarCPF()}<br>
+                <strong>Telefone:</strong> ${user.phone}<br>
+                <strong>Data Nascimento:</strong> ${gerarDataNascimento()}
+              </p>
+              <div class="d-flex justify-content-between">
+                <i
+                class="fa-solid fa-pencil text-primary fs-3"
+                data-bs-target="#editarUsuario"
+                data-bs-toggle="modal"
+                role="button"
+                ></i>
+                <i
+                class="fa-solid fa-trash text-danger fs-3"
+                data-bs-target="#deletarUsuario"
+                data-bs-toggle="modal"
+                role="button"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Adicionar o card à lista
+      userCards.innerHTML += card;
+    });
+  })
+  .catch(error => console.error('Erro na requisição:', error));
+
+
+
       const alertPlaceholder = document.getElementById("liveAlertPlaceholder");
       const appendAlert = (message, type) => {
         const wrapper = document.createElement("div");

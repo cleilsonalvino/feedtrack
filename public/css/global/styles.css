@@ -22,10 +22,13 @@ a[href="#"]{
   color: red;
 }
 
+
+
 .tabela{
   border: 1px solid rgb(153, 153, 153);
   border-collapse: collapse;
   color: rgb(189, 189, 189);
+  font-size: smaller;
 }
 .tabela td{
   padding: 12px;

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="public/css/global/fontawesome.all.min.css" />
     <script src="public/js/frameworks/bootstrap.bundle.js"></script>
     <script src="public/js/frameworks/popper.min.js"></script>
+    
 
   </head>
 
@@ -143,12 +144,12 @@
         </div>
         </div>
 
-        <div class="modal fade" id="editarUsuario">
+        <div class="modal fade" id="editarProduto">
         <div class="modal-dialog">
             <div class="modal-content modal-cadastro">
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="exampleModalLabel">
-                Cadastrar novo produto
+                Editar produto
                 </h1>
                 <button
                 type="button"
@@ -225,93 +226,90 @@
         </div>
         </div>
 
-        <table class="tabela col-xl-6 col-lg-8 col-md-10 m-auto mt-5">
-        <thead>
-            <tr>
-            <th>Código do produto</th>
-            <th>Nome do produto</th>
-            <th>Setor</th>
-            <th>Data de entrada</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-            <td>00000000</td>
-            <td>Tênis de corrida</td>
-            <td>Arara</td>
-            <td>12/12/12</td>
-            <td>
-                <i
-                class="fa-solid fa-pencil text-primary"
-                data-bs-target="#editarUsuario"
-                data-bs-toggle="modal"
-                role="button"
-                ></i>
-            </td>
-            <td>
-                <i
-                class="fa-solid fa-trash text-danger"
-                data-bs-target="#deletarUsuario"
-                data-bs-toggle="modal"
-                role="button"
-                ></i>
-            </td>
-            </tr>
-            <tr>
-            <td>11111111111</td>
-            <td>Camisa Fila</td>
-            <td>Arara</td>
-            <td>10/10/23</td>
-            <td>
-                <i
-                class="fa-solid fa-pencil text-primary"
-                data-bs-target="#editarUsuario"
-                data-bs-toggle="modal"
-                role="button"
-                ></i>
-            </td>
-            <td>
-                <i
-                class="fa-solid fa-trash text-danger"
-                data-bs-target="#deletarUsuario"
-                data-bs-toggle="modal"
-                role="button"
-                ></i>
-            </td>
-            </tr>
-            <tr>
-            <td>12345678910</td>
-            <td>Short esportivo fila</td>
-            <td>Zona B - frente</td>
-            <td>10/11/24</td>
-            <td>
-                <i
-                class="fa-solid fa-pencil text-primary"
-                data-bs-target="#editarUsuario"
-                data-bs-toggle="modal"
-                role="button"
-                ></i>
-            </td>
-            <td>
-                <i
-                class="fa-solid fa-trash text-danger"
-                data-bs-target="#deletarUsuario"
-                data-bs-toggle="modal"
-                role="button"
-                ></i>
-            </td>
-            </tr>
-        </tbody>
-        <tfoot></tfoot>
-        </table>
+        <div class="container mt-4">
+          <div id="productCards" class="row g-3">
+            <!-- Os cards serão inseridos aqui dinamicamente -->
+          </div>
+        </div>
+        
     </main>
     </div>
-    <footer class="text-center row fixed-bottom">
+    <footer class="text-center">
         <h1>Footer</h1>
         <p>&copy; 2024 FeedTrack. Todos os direitos reservados.</p>
     </footer>
 
     <script>
+
+      // Dados estáticos da tabela
+const produtos = [
+  {
+    codigo: "00000000",
+    nome: "Tênis de corrida",
+    setor: "Arara",
+    dataEntrada: "12/12/12",
+  },
+  {
+    codigo: "11111111111",
+    nome: "Camisa Fila",
+    setor: "Arara",
+    dataEntrada: "10/10/23",
+  },
+  {
+    codigo: "12345678910",
+    nome: "Short esportivo Fila",
+    setor: "Zona B - frente",
+    dataEntrada: "10/11/24",
+  },
+];
+
+// Função para renderizar os cards
+function renderizarCards() {
+  const productCards = document.querySelector('#productCards');
+
+  // Limpa os cards existentes
+  productCards.innerHTML = '';
+
+  produtos.forEach(produto => {
+    // Criar o HTML do card
+    const card = `
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100">
+          <div class="card-body bg-dark">
+            <h5 class="card-title">${produto.nome}</h5>
+            <p class="card-text">
+              <strong>Código:</strong> ${produto.codigo}<br>
+              <strong>Setor:</strong> ${produto.setor}<br>
+              <strong>Data de Entrada:</strong> ${produto.dataEntrada}
+            </p>
+            <div class="d-flex justify-content-between">
+              <i
+                class="fa-solid fa-pencil text-primary fs-3"
+                data-bs-target="#editarProduto"
+                data-bs-toggle="modal"
+                role="button"
+                ></i>
+              <i
+                class="fa-solid fa-trash text-danger fs-3"
+                data-bs-target="#deletarUsuario"
+                data-bs-toggle="modal"
+                role="button"
+                ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Adicionar o card à lista
+    productCards.innerHTML += card;
+  });
+}
+
+// Chama a função para renderizar os cards
+renderizarCards();
+
+
       const alertPlaceholder = document.getElementById("liveAlertPlaceholder");
       const appendAlert = (message, type) => {
         const wrapper = document.createElement("div");
@@ -324,54 +322,6 @@
 
         alertPlaceholder.append(wrapper);
       };
-
-      document
-        .getElementById("cpfCliente")
-        .addEventListener("input", function () {
-          let cpf = this.value;
-
-          // Remove caracteres que não sejam números
-          cpf = cpf.replace(/\D/g, "");
-
-          // Adiciona a máscara de CPF (000.000.000-00)
-          cpf = cpf.replace(/^(\d{3})(\d)/, "$1.$2"); // Adiciona o primeiro ponto
-          cpf = cpf.replace(/^(\d{3})\.(\d{3})(\d)/, "$1.$2.$3"); // Adiciona o segundo ponto
-          cpf = cpf.replace(/^(\d{3})\.(\d{3})\.(\d{3})(\d)/, "$1.$2.$3-$4"); // Adiciona o hífen
-
-          // Atualiza o valor do campo com a máscara aplicada
-          this.value = cpf;
-        });
-
-      // Máscara para o telefone
-      document
-        .getElementById("telefoneCliente")
-        .addEventListener("input", function () {
-          let telefone = this.value;
-
-          // Remove todos os caracteres não numéricos
-          telefone = telefone.replace(/\D/g, "");
-
-          // Aplica a máscara ao telefone
-          if (telefone.length <= 2) {
-            telefone = telefone.replace(/^(\d{2})/, "($1) "); // Adiciona o DDD
-          } else if (telefone.length <= 6) {
-            telefone = telefone.replace(/^(\d{2})(\d{1})/, "($1) $2 "); // Adiciona o espaço após o DDD
-          } else if (telefone.length <= 10) {
-            telefone = telefone.replace(
-              /^(\d{2})(\d{1})(\d{4})/,
-              "($1) $2 $3-"
-            ); // Adiciona o traço
-          } else {
-            telefone = telefone.replace(
-              /^(\d{2})(\d{1})(\d{4})(\d{4})/,
-              "($1) $2 $3-$4"
-            ); // Formato final
-          }
-
-          // Atualiza o valor do campo com a máscara aplicada
-          this.value = telefone;
-        });
-
       // Validação do formulário ao enviar
       document
         .querySelector("form")
