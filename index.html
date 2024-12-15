@@ -22,6 +22,7 @@
                         <h1>FEED</h1>
                         <div class="linha"></div>
                     </div>
+                    
                     <div class="content-rotacion">
                         <div class="linha"></div>
                         <h1>TRACK</h1>
@@ -30,11 +31,11 @@
 
                 <form class="form">
                     <span class="input-span">
-                    <label for="usuario" class="label">Usuário</label>
+                    <label for="usuario" class="label form-label">Usuário</label>
                     <input type="text" name="usuario" id="usuario"
                     /></span>
                     <span class="input-span">
-                    <label for="password" class="label">Senha</label>
+                    <label for="password" class="label form-label">Senha</label>
                     <input type="password" name="password" id="password"
                     /></span>
                     <span class="span"><a href="#">Esqueceu a senha?</a></span>
@@ -91,7 +92,7 @@
                 } else {
                     appendAlert('Login  Realizado com sucesso!', 'success'); // Chama a função para exibir o alerta
                     setTimeout(() => {
-                        window.location.href = "dashboard.html"; // Adicionar a dashboard.
+                        window.location.href = "1-dashboard.html"; // Adicionar a dashboard.
                     }, 1000);
                 }
             });

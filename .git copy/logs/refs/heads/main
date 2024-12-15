@@ -1,0 +1,24 @@
+0000000000000000000000000000000000000000 12d123e0958289699fc9fac3e5a42ad265fda027 Cleilson <137639044+cleilsonalvino@users.noreply.github.com> 1733441962 -0300	commit (initial): Initial commit
+12d123e0958289699fc9fac3e5a42ad265fda027 f9c55b10a1a1c347113656d71574e67d0524c88b Cleilson <137639044+cleilsonalvino@users.noreply.github.com> 1733442587 -0300	commit: new
+f9c55b10a1a1c347113656d71574e67d0524c88b 4046e7991953c725f973949359d4416f4477f88d Cleilson <137639044+cleilsonalvino@users.noreply.github.com> 1733442710 -0300	commit: Create index.html
+4046e7991953c725f973949359d4416f4477f88d b0f37ffdea508544371d4830a22fdcc1d599d6c7 Cleilson <137639044+cleilsonalvino@users.noreply.github.com> 1733447128 -0300	commit: .
+b0f37ffdea508544371d4830a22fdcc1d599d6c7 ed84fcf8617cd7ef715b1342a29a1c7b55152d43 Cleilson <137639044+cleilsonalvino@users.noreply.github.com> 1733631571 -0300	commit: Update cadastrocliente.html
+ed84fcf8617cd7ef715b1342a29a1c7b55152d43 32d826ff8238f9e495f1b74773cf28f4353e3334 Cleilson <137639044+cleilsonalvino@users.noreply.github.com> 1733800851 -0300	commit: foiii
+32d826ff8238f9e495f1b74773cf28f4353e3334 f7b9e83e0f8aab30f736f3951369e5946fb7db31 Cleilson <137639044+cleilsonalvino@users.noreply.github.com> 1733885200 -0300	pull --ff --recurse-submodules --progress origin: Fast-forward
+f7b9e83e0f8aab30f736f3951369e5946fb7db31 e83054af3023aaa1c5a15e947046819243858318 Cleilson <137639044+cleilsonalvino@users.noreply.github.com> 1733887144 -0300	commit: alteracoes no codigo como um todo
+e83054af3023aaa1c5a15e947046819243858318 d00ed5ff0fa843425c8af1f945c3362bf20a963c Cleilson <137639044+cleilsonalvino@users.noreply.github.com> 1733887286 -0300	commit: Update login.css
+d00ed5ff0fa843425c8af1f945c3362bf20a963c b216ce6762f718d10ce8d50e94a332f29c4760bc Cleilson <137639044+cleilsonalvino@users.noreply.github.com> 1733887471 -0300	commit: Update index.html
+b216ce6762f718d10ce8d50e94a332f29c4760bc 9c8a6d0b08a0d30f087fda55f9c0e6139f9a7806 Cleilson <137639044+cleilsonalvino@users.noreply.github.com> 1733887830 -0300	commit: oik
+9c8a6d0b08a0d30f087fda55f9c0e6139f9a7806 cb15975a6168e078daac023453a4f269f90501c2 Cleilson <137639044+cleilsonalvino@users.noreply.github.com> 1734048334 -0300	pull --ff --recurse-submodules --progress origin: Fast-forward
+cb15975a6168e078daac023453a4f269f90501c2 67019e7a76aca4f56ad84ed7857dde77e7e45fda Cleilson <137639044+cleilsonalvino@users.noreply.github.com> 1734049773 -0300	pull --ff --recurse-submodules --progress origin: Fast-forward
+67019e7a76aca4f56ad84ed7857dde77e7e45fda c731e0a172c02c2cdaf27db1346a1a96b2abb64e Cleilson <137639044+cleilsonalvino@users.noreply.github.com> 1734052031 -0300	commit: novas funcionalidades
+c731e0a172c02c2cdaf27db1346a1a96b2abb64e 6cd83a36319ff2fac9c0328fc71e5bbb2bde0583 Cleilson <137639044+cleilsonalvino@users.noreply.github.com> 1734053179 -0300	commit: Update dashboard.html
+6cd83a36319ff2fac9c0328fc71e5bbb2bde0583 97d5bb9430963e046d09a4da5160220e1261b082 Cleilson <137639044+cleilsonalvino@users.noreply.github.com> 1734053293 -0300	commit: Update dashboard.html
+97d5bb9430963e046d09a4da5160220e1261b082 d4412b6d33d59ed7557f54c7eed2c64625ec6ea7 Cleilson <137639044+cleilsonalvino@users.noreply.github.com> 1734054099 -0300	pull --ff --recurse-submodules --progress origin: Fast-forward
+d4412b6d33d59ed7557f54c7eed2c64625ec6ea7 1df0d7a66a73a87d072912953cd6b388220eed44 Cleilson <137639044+cleilsonalvino@users.noreply.github.com> 1734155064 -0300	pull --ff --recurse-submodules --progress origin: Fast-forward
+1df0d7a66a73a87d072912953cd6b388220eed44 371a1ecb2f52c87a9127189e9a88a79a9c034b31 Cleilson <137639044+cleilsonalvino@users.noreply.github.com> 1734223162 -0300	commit: fiz a navbar so falta ficar resposiva
+371a1ecb2f52c87a9127189e9a88a79a9c034b31 ae59a31a5ff778bb98f3ec6fa19896c6a3d0c8bd Cleilson <137639044+cleilsonalvino@users.noreply.github.com> 1734232472 -0300	pull --ff --recurse-submodules --progress origin: Fast-forward
+ae59a31a5ff778bb98f3ec6fa19896c6a3d0c8bd 6aa4d85c6214e26a67ae747ac1fc8ca858152877 Cleilson <137639044+cleilsonalvino@users.noreply.github.com> 1734241079 -0300	commit: menu responsivo
+6aa4d85c6214e26a67ae747ac1fc8ca858152877 2dec476a459ffe2cdf7f46a3367656749366916f Cleilson <137639044+cleilsonalvino@users.noreply.github.com> 1734290154 -0300	pull --ff --recurse-submodules --progress origin: Fast-forward
+2dec476a459ffe2cdf7f46a3367656749366916f 7e71d71916ab5bff92400c47890c3afc1d281f4c Cleilson <137639044+cleilsonalvino@users.noreply.github.com> 1734291238 -0300	commit: ajeitei as confirrmacoes
+7e71d71916ab5bff92400c47890c3afc1d281f4c 93be3366bb31b71c039abea504084bc7972db5f8 Cleilson <137639044+cleilsonalvino@users.noreply.github.com> 1734291712 -0300	commit: Update index.html

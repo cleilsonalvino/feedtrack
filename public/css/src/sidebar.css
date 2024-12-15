@@ -1,0 +1,31 @@
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Inicialmente escondido */
+    background-color: #343a40;
+    transition: 0.3s;
+}
+.sidebar.show {
+    left: 0; /* Menu visível */
+}
+
+/* Ajustando a largura do conteúdo quando o menu estiver visível */
+.content {
+    margin-left: 250px;
+    transition: margin-left 0.3s;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        left: -250px; /* Menu escondido em telas pequenas */
+    }
+    .sidebar.show {
+        left: 0; /* Menu visível em telas pequenas */
+    }
+
+    .content {
+        margin-left: 0; /* O conteúdo ocupa toda a tela em dispositivos pequenos */
+    }
+}
