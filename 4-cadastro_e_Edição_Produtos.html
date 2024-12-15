@@ -104,19 +104,17 @@
             <div class="modal-body modal-cadastro bg-dark">
                 <form action="">
                 <div class="cadastro card bg-dark">
-                    <label for="cpfCliente">Código do produto</label>
+                    <label for="codProduto">Código do produto</label>
                     <input
                     type="text"
-                    id="cpfCliente"
-                    maxlength="14"
+                    id="codProduto"
                     placeholder="Código do produto"
                     />
 
-                    <label for="telefoneCliente">Nome do produto</label>
+                    <label for="nomeProduto">Nome do produto</label>
                     <input
                     type="text"
-                    id="telefoneCliente"
-                    maxlength="16"
+                    id="nomeProduto"
                     placeholder="Nome do produto"
                     />
 
@@ -137,6 +135,7 @@
                     class="enviar"
                     id="liveAlertBtn"
                     data-bs-dismiss="modal"
+                    onclick="appendAlert('Produto adicionado com sucesso!', 'success')"
                 >
                     Cadastrar
                 </button>
@@ -171,11 +170,10 @@
                     placeholder="Código do produto"
                     />
 
-                    <label for="telefoneCliente">Nome do produto</label>
+                    <label for="nomeProduto">Nome do produto</label>
                     <input
                     type="text"
-                    id="telefoneCliente"
-                    maxlength="16"
+                    id="nomeProduto"
                     placeholder="Nome do produto"
                     />
 
@@ -196,6 +194,7 @@
                     class="enviar"
                     id="liveAlertBtn"
                     data-bs-dismiss="modal"
+                    onclick="appendAlert('Produto atualizado com sucesso!', 'success')"
                 >
                     Atualizar
                 </button>
@@ -215,7 +214,7 @@
                 <button
                 class="btn btn-success col-5"
                 data-bs-dismiss="modal"
-                onclick="appendAlert('Usuário excluído com sucesso!', 'success')"
+                onclick="appendAlert('Produto excluído com sucesso!', 'success')"
                 >
                 Sim
                 </button>
