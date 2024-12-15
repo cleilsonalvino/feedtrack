@@ -8,6 +8,7 @@
 body{
     color: white;
     background-color: #202634;
+    height: 100vh;
 }
 
 main{
@@ -17,6 +18,16 @@ main{
 
 a[href="#"]{
   color: red;
+}
+
+.tabela{
+  border: 1px solid rgb(153, 153, 153);
+  border-collapse: collapse;
+  color: rgb(189, 189, 189);
+}
+.tabela td{
+  padding: 12px;
+  border-bottom: 1px solid white;
 }
 
 
@@ -143,5 +154,6 @@ a[href="#"]{
   box-shadow: 0 0 5px rgba(74, 144, 226, 0.5); /* Sombra em foco */
 }
 
-
-
+footer{
+  color: lightgray;
+}

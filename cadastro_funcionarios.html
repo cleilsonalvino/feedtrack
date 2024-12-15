@@ -11,58 +11,68 @@
     <script src="public/js/frameworks/bootstrap.js"></script>
 </head>
 
-<body>
-    <main>
+<body class="d-flex">
+    <div class="container-fluid col-2 bg-dark d-flex flex-column">
+        
+        <button class="btn text-white m-4 fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="container-fluid d-flex flex-column justify-content-around h-50 d-md-flex d-none text-center">
+
+            
+            
+            <a href="dashboard.html" class="btn btn-dark">Início</a>
+            <a href="registro_e_consulta_feedbacks.html" class="btn btn-dark">Feedbacks</a>
+            <a href="cadastro_clientes.html" class="btn btn-dark">Clientes</a>
+            <a href="#" class="btn btn-dark">Produtos</a>
+            <a href="cadastro_funcionarios.html" class="btn btn-dark">Funcionários</a>
+            <a href="#" class="btn btn-dark">Sobre</a>
+            <a href="index.html" class="btn-dark fs-4"><i class="fa-solid fa-right-from-bracket"></i></a>
+        </div>
+        
+        
+    </div>
+    <main class="col-10">
         <div id="liveAlertPlaceholder"></div>
 
-        <a href="index.html">Sair</a>
-        <a href="dashboard.html">Início</a>
-        <a href="registro_e_consulta_feedbacks.html">Feedbacks</a>
-        <a href="cadastro_clientes.html">Clientes</a>
-        <a href="#">Produtos</a>
-        <a href="cadastro_funcionarios.html">Funcionários</a>
-        <a href="#">Sobre</a>
-
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Novo Cliente
+            Novo Funcionário
         </button>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
-                <div class="modal-content modal-cadastro">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-content bg-dark">
                     <div class="modal-header">
                         
-                        <form action="">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastrar novo cliente</h1>
-                            <div class="cadastro card">
-                                <label for="cpfUsuario">CPF</label>
-                                <input type="text" id="cpfUsuario" maxlength="14" placeholder="000.000.000-00">
-                                <label for="nomeUsuario">Nome</label>
-                                <input type="text" name="nomeUsuario" id="nomeUsuario">
-                                <label for="dataNasc">Data de Nascimento</label>
-                                <input type="date" name="dataNasc" id="dataNasc" required>
-                                <label for="cargFunc">Cargo</label>
-                                <select name="cargFunc" id="cargFunc" required>
-                                    <option value="1">Vendedor</option>
-                                    <option value="2">Estoquista</option>
-                                    <option value="3">Operador de computador</option>
-                                    <option value="">Gerente</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="enviar" id="liveAlertBtn">Cadastrar</button>
-                        </form>
-                        
-                    </div>
-                    
-                    <div class="modal-body modal-cadastro">
-                        
-                    </div>
+                        <div class="modal-body">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastrar novo funcionário</h1>
+                                <form action="">
+                                
+                                    <div class="cadastro card bg-dark">
+                                        <label for="cpfUsuario">CPF</label>
+                                        <input type="text" id="cpfUsuario" maxlength="14" placeholder="000.000.000-00">
+                                        <label for="nomeUsuario">Nome</label>
+                                        <input type="text" name="nomeUsuario" id="nomeUsuario">
+                                        <label for="dataNasc">Data de Nascimento</label>
+                                        <input type="date" name="dataNasc" id="dataNasc" required>
+                                        <label for="cargFunc">Cargo</label>
+                                        <select name="cargFunc" id="cargFunc" required>
+                                            <option value="1">Vendedor</option>
+                                            <option value="2">Estoquista</option>
+                                            <option value="3">Operador de computador</option>
+                                            <option value="">Gerente</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" class="enviar" id="liveAlertBtn">Cadastrar</button>
+                                </form>
+                            
+                        </div>
 
+                    </div>
                 </div>
             </div>
-        </div>
 
 
         </div>
@@ -231,7 +241,9 @@
         </div>
 
         <!-- Inclusão do JS do Bootstrap -->
-
+        <footer class="text-center py-3">
+            <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
+        </footer>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 

@@ -1,6 +1,7 @@
 
 body {
-    background-color: #202634; /* Cor de fundo da página */
+    background-color: #202634;
+    height: 100vh; /* Cor de fundo da página */
 }
 .title-text {
     text-align: center; 
@@ -32,3 +33,6 @@ a[href="#"]{
     color: white
 }
 
+footer{
+    color: lightgray;
+  }

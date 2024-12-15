@@ -7,101 +7,117 @@
     <link rel="stylesheet" href="public/css/frameworks/bootstrap.min.css">
     <link rel="stylesheet" href="public/css/global/fontawesome.all.min.css">
     <link rel="stylesheet" href="public/css/src/style.feedbacks.css">
+    <link rel="stylesheet" href="public/css/global/styles.css">
     <script src="public/js/frameworks/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
     <title>Registro e Consulta de Feedbecks</title>
 </head>
 
-<body>
-    <a href="index.html">Sair</a>
-    <a href="dashboard.html">Início</a>
-    <a href="registro_e_consulta_feedbacks.html">Feedbacks</a>
-    <a href="cadastro_clientes.html">Clientes</a>
-    <a href="#">Produtos</a>
-    <a href="cadastro_funcionarios.html">Funcionários</a>
-    <a href="#">Sobre</a>
+<body class="d-flex">
     
-        <div class="container">
-            <div class="title-text mt-3 text-white">
-                <h1>Registros de Feedbecks</h1>
-            </div>
+    <div class="container-fluid col-2 bg-dark d-flex flex-column">
+        
+        <button class="btn text-white m-4 fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="container-fluid d-flex flex-column justify-content-around h-50 d-md-flex d-none text-center">
+
+            
+            
+            <a href="dashboard.html" class="btn btn-dark">Início</a>
+            <a href="registro_e_consulta_feedbacks.html" class="btn btn-dark">Feedbacks</a>
+            <a href="cadastro_clientes.html" class="btn btn-dark">Clientes</a>
+            <a href="#" class="btn btn-dark">Produtos</a>
+            <a href="cadastro_funcionarios.html" class="btn btn-dark">Funcionários</a>
+            <a href="#" class="btn btn-dark">Sobre</a>
+            <a href="index.html" class="btn-dark fs-4"><i class="fa-solid fa-right-from-bracket"></i></a>
+        </div>
+        
+        
+    </div>
     
-            <!-- Card -->
-            <div class="row justify-content-center">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Histórico de Feedbecks</h5>
+        <main class="col-10">
+            <div class="container">
+                <div class="title-text mt-3 text-white">
+                    <h1>Registros de Feedbecks</h1>
+                </div>
+                <!-- Card -->
+                <div class="row justify-content-center">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Histórico de Feedbecks</h5>
+                                <div class="card-body">
+                                    <p><strong>Cliente:Luis Santiago
+                                    </strong><br> <strong> Vendedor:Leticia</strong><br>
+                                   <strong> Feedbeck:</strong><br>  <strong> Atendimento :</strong> O  atendimento de Letícia foi excepcional, ela foi atenciosa, simpática e demonstrada grande conhecimento <br><strong>
+                                   Produto comprado:</strong> O tênis que comprei é de excelente qualidade, com ótimo conforto, design moderno e materiais resistentes
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Cliente:Juliana Almeda
+                                </strong><br> <strong> Vendedor: Maria</strong><br>
+                               <strong> Feedbeck:</strong><br>  <strong> Atendimento :</strong> O atendimento de Maria foi excelente! Ela foi muito atenciosa, paciente e demonstrou grande conhecimento sobre os produtos. Me deu ótimas dicas sobre as opções de bolas e ajudou a escolher a melhor para minhas necessidades. Foi uma experiência muito agradável! <br><strong>
+                               Produto comprado:</strong> A bola de futebol que comprei é de altíssima qualidade. Ela tem uma excelente aderência, é bem resistente e possui um design incrível. A performance durante os jogos tem sido excelente, com ótimos passes e controle. Estou muito satisfeito com a minha escolha!
+                            </div>
                             <div class="card-body">
                                 <p><strong>Cliente:Luis Santiago
-                                </strong><br> <strong> Vendedor:Leticia</strong><br>
-                               <strong> Feedbeck:</strong><br>  <strong> Atendimento :</strong> O  atendimento de Letícia foi excepcional, ela foi atenciosa, simpática e demonstrada grande conhecimento <br><strong>
-                               Produto comprado:</strong> O tênis que comprei é de excelente qualidade, com ótimo conforto, design moderno e materiais resistentes
-
+                                </strong><br> <strong> Vendedor: Douglas </strong><br>
+                               <strong> Feedbeck:</strong><br>  <strong> Atendimento</strong> O atendimento de Douglas foi ótimo! Ele foi muito simpático, atencioso e me ajudou a escolher o boné ideal. Demonstrou excelente conhecimento sobre os produtos e me deu dicas valiosas para escolher o modelo que mais combinava comigo. Fiquei muito satisfeito com o atendimento. <br><strong>
+                               Produto comprado:</strong>  boné que comprei é excelente! Ele tem um design moderno, é confortável e de material de ótima qualidade. A adaptação no meu tamanho foi perfeita, e ele oferece bastante ventilação, ideal para o dia a dia. Estou muito feliz com a compra e com a escolha!
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Cliente: Ana Luiza
+                                </strong><br> <strong> Vendedor:João</strong><br>
+                               <strong> Feedbeck:</strong><br>  <strong> Atendimento:</strong> O atendimento de João foi impecável. Ele foi muito cordial, sempre disposto a ajudar e com um excelente conhecimento sobre os produtos. Com sua paciência e profissionalismo, ele me fez sentir totalmente à vontade para escolher o que mais atendia às minhas necessidades. <br><strong>
+                               Produto comprado:</strong> A camisa que comprei é fantástica! Ela possui um tecido de ótima qualidade, é super confortável e tem um corte moderno que se adapta muito bem ao corpo. Além disso, a estampa é discreta e elegante, perfeita para diversas ocasiões. Fiquei muito satisfeito com a compra!
+                            </div>
+            
+            
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <p><strong>Cliente:Juliana Almeda
-                            </strong><br> <strong> Vendedor: Maria</strong><br>
-                           <strong> Feedbeck:</strong><br>  <strong> Atendimento :</strong> O atendimento de Maria foi excelente! Ela foi muito atenciosa, paciente e demonstrou grande conhecimento sobre os produtos. Me deu ótimas dicas sobre as opções de bolas e ajudou a escolher a melhor para minhas necessidades. Foi uma experiência muito agradável! <br><strong>
-                           Produto comprado:</strong> A bola de futebol que comprei é de altíssima qualidade. Ela tem uma excelente aderência, é bem resistente e possui um design incrível. A performance durante os jogos tem sido excelente, com ótimos passes e controle. Estou muito satisfeito com a minha escolha!
-                        </div>
-                        <div class="card-body">
-                            <p><strong>Cliente:Luis Santiago
-                            </strong><br> <strong> Vendedor: Douglas </strong><br>
-                           <strong> Feedbeck:</strong><br>  <strong> Atendimento</strong> O atendimento de Douglas foi ótimo! Ele foi muito simpático, atencioso e me ajudou a escolher o boné ideal. Demonstrou excelente conhecimento sobre os produtos e me deu dicas valiosas para escolher o modelo que mais combinava comigo. Fiquei muito satisfeito com o atendimento. <br><strong>
-                           Produto comprado:</strong>  boné que comprei é excelente! Ele tem um design moderno, é confortável e de material de ótima qualidade. A adaptação no meu tamanho foi perfeita, e ele oferece bastante ventilação, ideal para o dia a dia. Estou muito feliz com a compra e com a escolha!
-                        </div>
-                        <div class="card-body">
-                            <p><strong>Cliente: Ana Luiza
-                            </strong><br> <strong> Vendedor:João</strong><br>
-                           <strong> Feedbeck:</strong><br>  <strong> Atendimento:</strong> O atendimento de João foi impecável. Ele foi muito cordial, sempre disposto a ajudar e com um excelente conhecimento sobre os produtos. Com sua paciência e profissionalismo, ele me fez sentir totalmente à vontade para escolher o que mais atendia às minhas necessidades. <br><strong>
-                           Produto comprado:</strong> A camisa que comprei é fantástica! Ela possui um tecido de ótima qualidade, é super confortável e tem um corte moderno que se adapta muito bem ao corpo. Além disso, a estampa é discreta e elegante, perfeita para diversas ocasiões. Fiquei muito satisfeito com a compra!
-                        </div>
-                            
-                            
+                    </div>
+                </div>
+                <div class="text-center mb-4">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">
+                        ESCREVA O SEU FEEDBACK
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Registro de Feedbecks</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Nome do destinatario:</label>
+                                        <input type="text" class="form-control" id="recipient-name">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="message-text" class="col-form-label">Registre aqui seu Feedbeck:</label>
+                                        <textarea class="form-control" id="message-text"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                <button type="button" class="btn btn-primary">Enviar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-    
-            <div class="text-center mb-4">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">
-                    ESCREVA O SEU FEEDBACK
-                </button>
-            </div>
-    
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Registro de Feedbecks</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="recipient-name" class="col-form-label">Nome do destinatario:</label>
-                                    <input type="text" class="form-control" id="recipient-name">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="message-text" class="col-form-label">Registre aqui seu Feedbeck:</label>
-                                    <textarea class="form-control" id="message-text"></textarea>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                            <button type="button" class="btn btn-primary">Enviar</button>
-                        </div>
-                    </div>
                 </div>
-            </div>
-    
-        </div>
-    </div>
-
+            
+                <footer class="text-center py-3">
+            <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
+                </footer>
+        </main>
 
 </body>
 

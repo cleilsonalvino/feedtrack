@@ -16,89 +16,104 @@
 
 </head>
 
-<body>
+<body class="d-flex">
 
-    <a href="index.html">Sair</a>
-    <a href="dashboard.html">Início</a>
-    <a href="registro_e_consulta_feedbacks.html">Feedbacks</a>
-    <a href="cadastro_clientes.html">Clientes</a>
-    <a href="#">Produtos</a>
-    <a href="cadastro_funcionarios.html">Funcionários</a>
-    <a href="#">Sobre</a>
+    <div class="container-fluid col-2 bg-dark d-flex flex-column">
+        
+        <button class="btn text-white m-4 fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fa-solid fa-bars"></i>
+        </button>
 
-    <div class="flex-grow-1">
-        <div class="container mt-4">
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Feedbacks</h5>
-                            <h2><i class="fas fa-comments"></i> 150</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Clientes</h5>
-                            <h2><i class="fas fa-users"></i> 300</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Produtos</h5>
-                            <h2><i class="fas fa-box"></i> 50</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="container-fluid d-flex flex-column justify-content-around h-50 d-md-flex d-none text-center">
+
+            
+            
+            <a href="dashboard.html" class="btn btn-dark">Início</a>
+            <a href="registro_e_consulta_feedbacks.html" class="btn btn-dark">Feedbacks</a>
+            <a href="cadastro_clientes.html" class="btn btn-dark">Clientes</a>
+            <a href="#" class="btn btn-dark">Produtos</a>
+            <a href="cadastro_funcionarios.html" class="btn btn-dark">Funcionários</a>
+            <a href="#" class="btn btn-dark">Sobre</a>
+            <a href="index.html" class="btn-dark fs-4"><i class="fa-solid fa-right-from-bracket"></i></a>
         </div>
-        <div class="container mt-5" id="graficos">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header">Produtos</div>
-                        <div class="card-body">
-                            <canvas id="idiomasChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header">Atividades Mensais</div>
-                        <div class="card-body">
-                            <canvas id="atividadesChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header">Receita</div>
-                        <div class="card-body">
-                            <canvas id="receitaChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header">Crescimento de Usuários</div>
-                        <div class="card-body">
-                            <canvas id="crescimentoChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
+        
+    </div>
 
-        <footer class="text-center py-3">
-            <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
-        </footer>
-    </div>
-    </div>
+    <main class="col-10 container-fluid">
+        <div class="flex-grow-1">
+            <div class="container mt-4">
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Feedbacks</h5>
+                                <h2><i class="fas fa-comments"></i> 150</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Clientes</h5>
+                                <h2><i class="fas fa-users"></i> 300</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Produtos</h5>
+                                <h2><i class="fas fa-box"></i> 50</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-5" id="graficos">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">Produtos</div>
+                            <div class="card-body">
+                                <canvas id="idiomasChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">Atividades Mensais</div>
+                            <div class="card-body">
+                                <canvas id="atividadesChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">Receita</div>
+                            <div class="card-body">
+                                <canvas id="receitaChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">Crescimento de Usuários</div>
+                            <div class="card-body">
+                                <canvas id="crescimentoChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="text-center py-3">
+                <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
+            </footer>
+        </div>
+    </main>
+
     <script src="public/js/dashboard.js"></script>
 </body>
 
