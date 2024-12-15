@@ -1,0 +1,9 @@
+footer {
+    color: #ffc107;
+    margin-bottom: 10px; 
+}
+
+ footer > p {
+    color: #fff;
+    margin-bottom: 5px; 
+}
