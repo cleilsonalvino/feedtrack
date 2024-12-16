@@ -22,13 +22,11 @@ a[href="#"]{
 .card-body {
     padding: 1rem;
     background-color: #1a1a1a;
-    border: 1px solid #ffc107;
     color: aliceblue;
 }
 
 .card-title {
     font-size: 1.25rem;
-    font-size: 1.25rem; /* Ajusta o tamanho do título */
     font-weight: bold;
     color: white
 }
