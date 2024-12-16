@@ -78,6 +78,7 @@
     </nav>
 
     <main>
+      <div id="liveAlertPlaceholder"></div>
       <div class="title-text mt-3 text-white">
         <h1>Registros de Feedbacks</h1>
       </div>
@@ -93,6 +94,30 @@
         </button>
       </div>
       <!-- Modal -->
+
+      <div class="modal fade" id="deletarUsuario">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-title bg-dark">
+                <h5>Deseja realmente excluír?</h5>
+            </div>
+            <div class="modal-footer bg-dark">
+                <button
+                class="btn btn-success col-5"
+                data-bs-dismiss="modal"
+                onclick="appendAlert('Feedback excluído com sucesso!', 'success')"
+                >
+                Sim
+                </button>
+
+                <button class="btn btn-danger col-5" data-bs-dismiss="modal">
+                Não
+                </button>
+            </div>
+            </div>
+        </div>
+        </div>
+
       <div
         class="modal fade"
         id="exampleModal"
@@ -166,7 +191,14 @@
                   O tênis que comprei é de excelente qualidade, com ótimo
                   conforto, design moderno e materiais resistentes.
                 </p>
+                
               </div>
+              <i
+                class="fa-solid fa-trash text-danger fs-3 m-2"
+                data-bs-target="#deletarUsuario"
+                data-bs-toggle="modal"
+                role="button"
+                ></i>
             </div>
           </div>
 
@@ -197,6 +229,12 @@
                   satisfeito com a minha escolha!
                 </p>
               </div>
+              <i
+                class="fa-solid fa-trash text-danger fs-3 m-2"
+                data-bs-target="#deletarUsuario"
+                data-bs-toggle="modal"
+                role="button"
+                ></i>
             </div>
           </div>
 
@@ -227,6 +265,12 @@
                   escolha!
                 </p>
               </div>
+              <i
+                class="fa-solid fa-trash text-danger fs-3 m-2"
+                data-bs-target="#deletarUsuario"
+                data-bs-toggle="modal"
+                role="button"
+                ></i>
             </div>
           </div>
 
@@ -256,6 +300,12 @@
                   vou usar bastante.
                 </p>
               </div>
+              <i
+                class="fa-solid fa-trash text-danger fs-3 m-2"
+                data-bs-target="#deletarUsuario"
+                data-bs-toggle="modal"
+                role="button"
+                ></i>
             </div>
           </div>
         </div>
@@ -267,6 +317,21 @@
         <p>&copy; 2024 Feedtrack. Todos os direitos reservados.</p>
       </div>
     </footer>
+    
+    <script>
+      const alertPlaceholder = document.getElementById('liveAlertPlaceholder');
+const appendAlert = (message, type) => {
+  const wrapper = document.createElement('div');
+  wrapper.innerHTML = [
+    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+    `   <div>${message}</div>`,
+    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+    '</div>'
+  ].join('');
+
+  alertPlaceholder.append(wrapper);
+}
+    </script>
 
     
   </body>
